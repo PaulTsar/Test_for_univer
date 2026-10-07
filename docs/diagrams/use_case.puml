@@ -1,0 +1,46 @@
+@startuml
+
+left to right direction
+skinparam shadowing false
+
+actor "Преподаватель" as Teacher
+actor "Студент" as Student
+actor "Администратор" as Admin
+
+rectangle "Система учёта посещаемости" {
+
+    usecase "Просмотреть отчёт\nпо отдельному студенту\nза период" as StudentReport
+
+    usecase "Отметить\nпосещаемость" as MarkAttendance
+
+    usecase "Просмотреть отчёт\nпо группе за период" as GroupReport
+
+    usecase "Создать занятие" as CreateLesson
+
+    usecase "Экспортировать отчёт\nв CSV/JSON" as ExportReport
+
+    usecase "Просмотреть свою\nпосещаемость и пропуски" as ViewOwnAttendance
+
+    usecase "Экспортировать свою\nпосещаемость в CSV/JSON" as ExportOwnAttendance
+
+    usecase "Управлять студентами" as ManageStudents
+
+    usecase "Управлять группами" as ManageGroups
+}
+
+Teacher -- StudentReport
+Teacher -- MarkAttendance
+Teacher -- GroupReport
+Teacher -- CreateLesson
+Teacher -- ExportReport
+
+Student -- ViewOwnAttendance
+Student -- ExportOwnAttendance
+
+Admin -- StudentReport
+Admin -- GroupReport
+Admin -- ExportReport
+Admin -- ManageStudents
+Admin -- ManageGroups
+
+@enduml
