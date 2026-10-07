@@ -143,4 +143,4 @@ Hello, World!
 - [Python](https://www.python.org/)
 - [Git](https://git-scm.com/)
 - [GitHub](https://github.com/)
-- [PlantUML](https://plantuml.com/)
+- [PlantUML](https://plantuml.com/)ы. Выбрана трёхуровневая архитектура и технологии реализации. Построены Use Case диаграмма и две блок-схемы основных процессов.
