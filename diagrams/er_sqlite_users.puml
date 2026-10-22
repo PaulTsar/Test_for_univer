@@ -1,0 +1,75 @@
+@startuml
+hide circle
+skinparam linetype ortho
+skinparam shadowing false
+title Учёт посещаемости — SQLite
+
+entity "GROUPS" as groups {
+  * group_id : INTEGER <<PK>>
+  --
+  * name : TEXT <<UNIQUE>>
+}
+
+entity "TEACHERS" as teachers {
+  * teacher_id : INTEGER <<PK>>
+  --
+  * full_name : TEXT
+}
+
+entity "STUDENTS" as students {
+  * student_id : INTEGER <<PK>>
+  --
+  * full_name : TEXT
+  * group_id : INTEGER <<FK>>
+}
+
+entity "LESSONS" as lessons {
+  * lesson_id : INTEGER <<PK>>
+  --
+  * date : TEXT
+  * group_id : INTEGER <<FK>>
+  * teacher_id : INTEGER <<FK>>
+}
+
+entity "ATTENDANCE" as attendance {
+  * attendance_id : INTEGER <<PK>>
+  --
+  * lesson_id : INTEGER <<FK>>
+  * student_id : INTEGER <<FK>>
+  * status : TEXT
+}
+
+entity "USERS" as users {
+  * user_id : INTEGER <<PK>>
+  --
+  * login : TEXT <<UNIQUE>>
+  * password_hash : TEXT
+  * role : TEXT
+  student_id : INTEGER <<FK, UNIQUE>>
+  teacher_id : INTEGER <<FK, UNIQUE>>
+}
+
+groups ||--o{ students : group_id
+groups ||--o{ lessons : group_id
+teachers ||--o{ lessons : teacher_id
+students ||--o{ attendance : student_id
+lessons ||--o{ attendance : lesson_id
+students |o--o| users : student_id
+teachers |o--o| users : teacher_id
+
+note right of users
+  admin: student_id и teacher_id = NULL
+  teacher: только teacher_id заполнен
+  student: только student_id заполнен
+end note
+
+note bottom of attendance
+  UNIQUE (lesson_id, student_id)
+  status: present / absent / excused
+end note
+
+legend bottom
+  * — NOT NULL
+  Студенты и занятия: M:N через ATTENDANCE.
+endlegend
+@enduml

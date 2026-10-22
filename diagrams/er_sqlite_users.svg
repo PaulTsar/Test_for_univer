@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1880" height="1300" viewBox="0 0 1880 1300">
+<rect width="100%" height="100%" fill="#f7f9fc"/>
+<text x="60" y="61" font-family="DejaVu Sans, sans-serif" font-size="36" font-weight="700" fill="#19314b">Учёт посещаемости — SQLite</text>
+<text x="60" y="100" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#60738b">Ваша схема + учётные записи администратора, преподавателей и студентов</text>
+<polyline points="490,205 650,205" fill="none" stroke="#5e7995" stroke-width="3"/>
+<text x="513" y="188" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#19314b">1</text>
+<text x="583" y="239" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19314b">0..N</text>
+<polyline points="275,290 275,650" fill="none" stroke="#5e7995" stroke-width="3"/>
+<text x="293" y="337" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#19314b">1</text>
+<text x="293" y="621" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">0..N</text>
+<polyline points="1300,205 1150,205" fill="none" stroke="#5e7995" stroke-width="3"/>
+<text x="1268" y="189" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#19314b">1</text>
+<text x="1164" y="239" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19314b">0..N</text>
+<polyline points="900,370 900,650" fill="none" stroke="#5e7995" stroke-width="3"/>
+<text x="918" y="416" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#19314b">1</text>
+<text x="918" y="622" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">0..N</text>
+<polyline points="490,765 650,765" fill="none" stroke="#5e7995" stroke-width="3"/>
+<text x="515" y="748" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#19314b">1</text>
+<text x="588" y="799" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#19314b">0..N</text>
+<polyline points="1515,290 1515,650" fill="none" stroke="#7954a3" stroke-width="3" stroke-dasharray="10 8"/>
+<text x="1534" y="337" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#7954a3">0..1</text>
+<text x="1534" y="622" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#7954a3">0..1</text>
+<text x="1534" y="475" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#7954a3">teacher_id</text>
+<polyline points="275,860 275,1080 1550,1080 1550,980" fill="none" stroke="#7954a3" stroke-width="3" stroke-dasharray="10 8"/>
+<text x="293" y="907" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#7954a3">0..1</text>
+<text x="1568" y="1027" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#7954a3">0..1</text>
+<text x="815" y="1064" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#7954a3">student_id</text>
+<rect x="60" y="120" width="430" height="170" fill="#fff" stroke="#c7d4e4" stroke-width="2"/>
+<rect x="60" y="120" width="430" height="75" fill="#22486b"/>
+<text x="78" y="159" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#fff">GROUPS</text>
+<text x="78" y="184" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#e6effb">Учебные группы</text>
+<text x="78" y="229" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">PK  group_id : INTEGER</text>
+<text x="78" y="269" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">name : TEXT  [UNIQUE]</text>
+<rect x="650" y="120" width="500" height="250" fill="#fff" stroke="#c7d4e4" stroke-width="2"/>
+<rect x="650" y="120" width="500" height="75" fill="#22486b"/>
+<text x="668" y="159" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#fff">LESSONS</text>
+<text x="668" y="184" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#e6effb">Занятия</text>
+<text x="668" y="229" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">PK  lesson_id : INTEGER</text>
+<text x="668" y="269" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">date : TEXT</text>
+<text x="668" y="309" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">FK  group_id : INTEGER</text>
+<text x="668" y="349" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">FK  teacher_id : INTEGER</text>
+<rect x="1300" y="120" width="430" height="170" fill="#fff" stroke="#c7d4e4" stroke-width="2"/>
+<rect x="1300" y="120" width="430" height="75" fill="#22486b"/>
+<text x="1318" y="159" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#fff">TEACHERS</text>
+<text x="1318" y="184" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#e6effb">Преподаватели</text>
+<text x="1318" y="229" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">PK  teacher_id : INTEGER</text>
+<text x="1318" y="269" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">full_name : TEXT</text>
+<rect x="60" y="650" width="430" height="210" fill="#fff" stroke="#c7d4e4" stroke-width="2"/>
+<rect x="60" y="650" width="430" height="75" fill="#22486b"/>
+<text x="78" y="689" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#fff">STUDENTS</text>
+<text x="78" y="714" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#e6effb">Студенты</text>
+<text x="78" y="759" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">PK  student_id : INTEGER</text>
+<text x="78" y="799" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">full_name : TEXT</text>
+<text x="78" y="839" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">FK  group_id : INTEGER</text>
+<rect x="650" y="650" width="500" height="250" fill="#fff" stroke="#c7d4e4" stroke-width="2"/>
+<rect x="650" y="650" width="500" height="75" fill="#22486b"/>
+<text x="668" y="689" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#fff">ATTENDANCE</text>
+<text x="668" y="714" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#e6effb">Посещаемость</text>
+<text x="668" y="759" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">PK  attendance_id : INTEGER</text>
+<text x="668" y="799" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">FK  lesson_id : INTEGER</text>
+<text x="668" y="839" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">FK  student_id : INTEGER</text>
+<text x="668" y="879" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">status : TEXT</text>
+<rect x="1300" y="650" width="500" height="330" fill="#fff" stroke="#c7d4e4" stroke-width="2"/>
+<rect x="1300" y="650" width="500" height="75" fill="#65428d"/>
+<text x="1318" y="689" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" fill="#fff">USERS</text>
+<text x="1318" y="714" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#e6effb">Учётные записи</text>
+<text x="1318" y="759" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">PK  user_id : INTEGER</text>
+<text x="1318" y="799" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">login : TEXT  [UNIQUE]</text>
+<text x="1318" y="839" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">password_hash : TEXT</text>
+<text x="1318" y="879" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">role : TEXT</text>
+<text x="1318" y="919" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">FK  student_id : INTEGER [UQ, NULL]</text>
+<text x="1318" y="959" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" fill="#19314b">FK  teacher_id : INTEGER [UQ, NULL]</text>
+<text x="60" y="1157" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19314b">PK — первичный ключ; FK — внешний ключ; UQ — UNIQUE. Дата: YYYY-MM-DD.</text>
+<text x="60" y="1195" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19314b">Администратор: role = admin, student_id = NULL, teacher_id = NULL.</text>
+<text x="60" y="1233" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19314b">Пунктир — необязательная связь с учётной записью. Прочие поля — NOT NULL.</text>
+<text x="60" y="1271" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#19314b">ATTENDANCE: UNIQUE (lesson_id, student_id); статусы present / absent / excused.</text>
+</svg>
