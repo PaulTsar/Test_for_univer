@@ -4,7 +4,7 @@ from check_sqlite import main as show_database
 def main():
     print("Hello, World!")
     print("Система учёта посещаемости студентов")
-    print("Учебный проект для лабораторной работы №2")
+    print("Учебный проект")
     print("Программа успешно запущена.")
 
     init_database()
