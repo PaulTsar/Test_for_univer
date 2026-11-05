@@ -1,14 +1,24 @@
 from init_sqlite import main as init_database
-from check_sqlite import main as show_database
+from ui.auth_ui import login_screen
+from ui.menus import admin_menu, teacher_menu, student_menu
+
 
 def main():
-    print("Hello, World!")
-    print("Система учёта посещаемости студентов")
-    print("Учебный проект")
-    print("Программа успешно запущена.")
+    print("=====================================")
+    print("  Система учёта посещаемости студентов  ")
+    print("=====================================")
 
+    print("Подготовка базы данных...")
     init_database()
-    show_database()
+
+    user = login_screen()
+
+    if user.is_admin:
+        admin_menu(user)
+    elif user.is_teacher:
+        teacher_menu(user)
+    elif user.is_student:
+        student_menu(user)
 
 
 if __name__ == "__main__":
