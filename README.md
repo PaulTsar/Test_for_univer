@@ -163,7 +163,7 @@ Hello, World!
 
 ![ER-диаграмма базы данных](diagrams/er_sqlite_users.png)
 
-[Исходник PlantUML](diagrams/er_sqlite_users.puml) · [SVG](diagrams/er_sqlite_users.svg)
+[Исходник PlantUML](diagrams/er_sqlite_users.puml) · [SVG](diagrams/er_sqlite_users.png)
 
 ### Таблицы
 
