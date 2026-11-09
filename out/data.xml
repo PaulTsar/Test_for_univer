@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<records>
+    <record>
+        <student_id>1</student_id>
+        <full_name>Иванов Павел Сергеевич</full_name>
+        <group>
+            <group_id>1</group_id>
+            <name>26-ИВТ-4-1</name>
+        </group>
+    </record>
+    <record>
+        <student_id>2</student_id>
+        <full_name>Петрова Анна Андреевна</full_name>
+        <group>
+            <group_id>1</group_id>
+            <name>26-ИВТ-4-1</name>
+        </group>
+    </record>
+    <record>
+        <student_id>3</student_id>
+        <full_name>Сидоров Максим Олегович</full_name>
+        <group>
+            <group_id>2</group_id>
+            <name>26-ИВТ-4-2</name>
+        </group>
+    </record>
+    <record>
+        <student_id>4</student_id>
+        <full_name>Соколова Мария Игоревна</full_name>
+        <group>
+            <group_id>2</group_id>
+            <name>26-ИВТ-4-2</name>
+        </group>
+    </record>
+</records>
